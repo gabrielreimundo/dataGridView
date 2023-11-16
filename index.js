@@ -4,6 +4,7 @@ const configdgv={
 }
 
 const dgv=(configdgv)=>{
+    const dgvDados=document.getElementById(configdgv.idDestino);
     fetch(configdgv.endpoint)
     .then(res=>res.json())
     .then(res=>{
@@ -28,13 +29,15 @@ const dgv=(configdgv)=>{
 
             const c4=document.createElement("div");
             c4.setAttribute("class","c4");
-            c4.innerHTML=el.marca;
+            c4.innerHTML=el.modelo;
             dgvLinha.appendChild(c4)
 
             const c5=document.createElement("div");
             c5.setAttribute("class","c5");
             c5.innerHTML="DEV";
             dgvLinha.appendChild(c5)
+
+            dgvDados.appendChild(dgvLinha)
         });
         console.log(res)
     })
