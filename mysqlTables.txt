@@ -1,0 +1,6 @@
+ create table produtos(
+     n_id_produto int primary key not null auto_increment,
+     s_nome_produto varchar(255),
+     s_marca_produto varchar(255),
+     modelo varchar(255)
+     );

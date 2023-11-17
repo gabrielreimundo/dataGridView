@@ -10,6 +10,8 @@ const dgv=(configdgv)=>{
     .then(res=>{
         res.forEach(el => {
             const dgvLinha=document.createElement("div");
+            //dgvDados.innerHTML="";
+
             dgvLinha.setAttribute("class","dgvLinha");
 
             const c1=document.createElement("div");
@@ -34,8 +36,23 @@ const dgv=(configdgv)=>{
 
             const c5=document.createElement("div");
             c5.setAttribute("class","c5");
-            c5.innerHTML="DEV";
+            // c5.innerHTML="DEV";
             dgvLinha.appendChild(c5)
+
+            const imgDelete=document.createElement("img");
+            imgDelete.setAttribute("class","dgvIcone");
+            imgDelete.setAttribute("src","delete_FILL0_wght400_GRAD0_opsz24.svg")
+            c5.appendChild(imgDelete)
+
+            const imgEditar=document.createElement("img");
+            imgEditar.setAttribute("class","dgvIcone");
+            imgEditar.setAttribute("src","edit_FILL0_wght400_GRAD0_opsz24.svg")
+            c5.appendChild(imgEditar)
+
+            const imgExibir=document.createElement("img");
+            imgExibir.setAttribute("class","dgvIcone");
+            imgExibir.setAttribute("src","visibility_FILL0_wght400_GRAD0_opsz24.svg")
+            c5.appendChild(imgExibir)
 
             dgvDados.appendChild(dgvLinha)
         });
@@ -44,11 +61,3 @@ const dgv=(configdgv)=>{
 }
  
 dgv(configdgv)
-
-/* <div class="dgvLinha">
-<div class="c1">01</div>
-<div class="c2">Processador</div>
-<div class="c3">intel</div>
-<div class="c4">i7</div>
-<div class="c5">DEV</div>
-</div>*/
